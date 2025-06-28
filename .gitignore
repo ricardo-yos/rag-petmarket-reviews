@@ -209,3 +209,7 @@ __marimo__/
 # Ignore all runtime files in memory/ but keep the folder structure
 memory/*
 !memory/.gitkeep
+
+# Ignore ChromaDB auto-generated folders but keep the main SQLite file
+data/chroma/*
+!data/chroma/chroma.sqlite3
