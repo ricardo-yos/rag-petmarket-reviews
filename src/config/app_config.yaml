@@ -1,0 +1,42 @@
+# RAG assistant configuration:
+# - LLM model selection
+# - Vector DB search settings
+# - Multi-turn chat memory management
+# - Reasoning strategy templates for responses
+
+llm: "llama-3.1-8b-instant"  # LLM model name (e.g., LLaMA 3 8B instant)
+
+vectordb:
+  threshold: 0.3             # Cosine similarity threshold; lower means stricter similarity
+  n_results: 5               # Number of top similar documents to retrieve
+
+memory_strategies:
+  trimming_window_size: 6            # Number of recent Q/A pairs to retain in chat memory
+  summarization_max_tokens: 1000     # Token limit to trigger chat history summarization
+
+reasoning_strategies:
+  default: "CoT"  # Default reasoning method
+
+  CoT: |          # Chain-of-Thought approach steps
+    Use this systematic approach to provide your response:
+    1. Break down the problem into smaller steps
+    2. Address each step systematically
+    3. Show your reasoning for each step
+    4. Then provide your final conclusion
+
+  ReAct: |        # Thought-Action-Observation-Reflection cycle
+    Use this systematic approach to provide your response:
+    1. Thought: What approaches could I take to solve this?
+    2. Action: Choose and implement the best approach
+    3. Observation: What happened? What did I learn?
+    4. Reflection: Do I have enough information to provide my final answer, or should I try a different approach?
+
+    (Repeat steps 1–4 as needed)
+
+    Then provide your final answer.
+
+  Self-Ask: |     # Decompose question and synthesize answers
+    Use this systematic approach to provide your response:
+    1. Break the main question into smaller sub-questions.
+    2. Answer each sub-question thoroughly.
+    3. Then, based on those answers, synthesize a clear and thoughtful final response.
