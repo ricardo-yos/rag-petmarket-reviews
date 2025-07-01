@@ -1,3 +1,15 @@
+"""
+llm_helpers.py
+
+Utility functions for interacting with language models (LLMs).
+
+Functions
+---------
+- count_tokens: Counts tokens in a text string using the appropriate tokenizer.
+- needs_history_context: Determines if a query depends on previous conversation history.
+- fix_markdown_response: Cleans and improves Markdown formatting in LLM outputs.
+"""
+
 import tiktoken
 from langchain_core.messages import HumanMessage
 from utils.logger import setup_logger
