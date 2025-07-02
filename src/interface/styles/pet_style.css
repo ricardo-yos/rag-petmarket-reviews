@@ -1,0 +1,85 @@
+/* === Chat Container === */
+/* Scrollable chat box with soft background and smooth scroll */
+#chat-container {
+    height: 500px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: #F8F7FF; /* very light lavender */
+    scroll-behavior: smooth;
+}
+
+/* === Main Content === */
+/* Light purple background for overall layout with comic-style font for friendly tone */
+.main {
+    background: #F5F3FF; /* soft lavender */
+    color: #3B2F2F; /* dark brown text */
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    padding: 1rem 2rem 2rem 2rem;
+}
+
+/* === Title Style === */
+/* Bold and large title in vibrant purple */
+.css-1v0mbdj {
+    color: #8A2BE2; /* BlueViolet */
+    font-weight: 700;
+    font-size: 2.8rem;
+    margin-bottom: 24px;
+}
+
+/* === Sidebar === */
+/* Pale lilac background with padding and rounded corners */
+section[data-testid="stSidebar"] {
+    background-color: #E6E0FF; /* pale lilac */
+    border-radius: 12px;
+    padding: 20px;
+}
+
+/* === Button Styles === */
+/* Purple buttons with white text and hover effect */
+div.stButton > button {
+    background-color: #8A2BE2; /* primary purple */
+    color: white;
+    font-weight: 700;
+    border-radius: 14px;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+div.stButton > button:hover {
+    background-color: #6A1FB0; /* darker purple */
+    cursor: pointer;
+}
+
+/* === Chat Message Text === */
+/* Message text with comfortable reading size and spacing */
+.streamlit-chat-message p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* === Footer Visibility Control === */
+/* Hide default Streamlit footer */
+footer {
+    visibility: hidden;
+}
+
+/* Show custom footer only inside main content */
+.main footer {
+    visibility: visible;
+}
+
+/* === Custom Footer === */
+/* Fixed footer bar at the bottom with soft yellow background */
+.footer-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fdf3dc; /* warm beige */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+    color: gray;
+    border-top: 1px solid #ddd;
+}
