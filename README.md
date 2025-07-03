@@ -64,6 +64,7 @@ rag_petmarket_reviews/
 │   │
 │   ├── core/                     # Core logic of the assistant (RAG engine, prompt building, memory)
 │   │   ├── __init__.py           # Makes 'core' a Python package
+│   │   ├── llm_helpers.py        # Utilities for interacting with the LLM
 │   │   ├── memory.py             # Manages conversational memory (loading, saving, updating)
 │   │   ├── prompt_builder.py     # Builds and manages language model prompts
 │   │   ├── rag_assistant.py      # Main logic for retrieval-augmented generation assistant
@@ -83,7 +84,8 @@ rag_petmarket_reviews/
 │   │
 │   ├── utils/                    # Utility functions shared across modules
 │   │   ├── __init__.py           # Makes 'utils' a Python package
-│   │   └── logger.py             # Logging setup and utilities
+│   │   ├── logger.py             # Logging setup and utilities
+│   │   └── translator.py         # Translation utility for multilingual support
 │   │
 │   └── app.py                   # Main application entry point
 │
