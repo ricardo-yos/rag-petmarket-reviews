@@ -334,6 +334,8 @@ Send a pull request with a detailed description of your modifications.
 
 ---
 
-### Contact
+## Contact
 
 Feel free to reach out via GitHub for questions, feedback, or collaboration opportunities.
+
+---
