@@ -246,20 +246,8 @@ Make sure to run the data processing scripts before launching the app to ensure 
 ## Configuration
 
 The project uses configuration files to centralize and simplify the management of key settings.
-
-### 1. `.env` File
-
-Located at the project root (`rag-petmarket-reviews/.env`), this file contains environment variables such as API keys.
-
-Example:
-
-```bash
-GROQ_API_KEY=your_api_key_here
-```
-
-This file is **not included in version control** (.gitignore) and must be created manually.
-
-### 2. `app_config.yaml`
+ 
+### 1. `app_config.yaml`
 
 Path: `src/config/app_config.yaml`
 
@@ -300,7 +288,7 @@ reasoning_strategies:
   default: "CoT"
 ```
 
-### 3. `prompt_config.yaml`
+### 2. `prompt_config.yaml`
 
 Path: `src/config/prompt_config.yaml`
 
@@ -320,17 +308,6 @@ prompt:
   user_template: |
     Based on the reviews, answer the following question: {question}
 ```
-
-### 4. paths.py
-
-Path: `src/config/paths.py`
-
-Centralized Python module that defines key file system paths used throughout the project, such as:
-- Path to raw and processed data
-- Vector DB storage
-- Chat history DB
-
-Keeping all path definitions here allows for easier refactoring and consistency across modules.
 
 ---
 
