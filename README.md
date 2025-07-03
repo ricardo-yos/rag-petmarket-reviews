@@ -107,21 +107,27 @@ rag_petmarket_reviews/
 
 Make sure you have Python 3.10 or higher installed.
 
-1. Clone the repository and navigate into it:
+### 1. Clone the repository
+
+Download the project to your local machine using Git:
 
 ```bash
 git clone https://github.com/ricardo-yos/rag-petmarket-reviews.git
 cd rag-petmarket-reviews
 ```
 
-2. Create and activate a virtual environment using Conda:
+### 2. Create a virtual environment
+
+Set up a dedicated Conda environment for the project:
 
 ```bash
 conda create -n rag_env python=3.10
 conda activate rag_env
 ```
 
-3. Install the required Python packages:
+### 3. Install dependencies
+
+Install all required Python packages listed in `requirements.txt`:
 
 ```bash
 pip install -r requirements.txt
@@ -143,7 +149,7 @@ GROQ_API_KEY=your_api_key_here
 
 ## Usage
 
-1. Prepare the data by running the data processing scripts in the following order:
+### 1. Prepare the data
 
 - `generate_json.py`: Integrates data from places and reviews into a unified JSON file, associating each place with its corresponding reviews.
 - `build_db.py`: Creates chunked review texts and generates their embeddings, then stores them in a ChromaDB collection for semantic search.
@@ -155,7 +161,7 @@ python -m data_processing.build_db            # Chunk reviews and store embeddin
 cd ..                                         # Return to the project root
 ```
 
-2. Launch the application:
+### 2. Launch the application
 
 Start the assistant using **Streamlit**:
 
@@ -166,7 +172,7 @@ PYTHONPATH=$(pwd)/src streamlit run src/app.py
 >
 > This will open a **web interface in your browser** where you can interact with the assistant via natural language.
 
-3. User Interface (Streamlit):
+### 3. User Interface (Streamlit)
 
 The application uses Streamlit to deliver a simple and intuitive chat interface:
 
@@ -239,7 +245,7 @@ Make sure to run the data processing scripts before launching the app to ensure 
 
 The project uses configuration files to centralize and simplify the management of key settings.
 
-1. `.env` File
+### 1. `.env` File
 
 Located at the project root (`rag-petmarket-reviews/.env`), this file contains environment variables such as API keys.
 
@@ -251,7 +257,7 @@ GROQ_API_KEY=your_api_key_here
 
 This file is **not included in version control** (.gitignore) and must be created manually.
 
-2. `app_config.yaml`
+### 2. `app_config.yaml`
 
 Path: `src/config/app_config.yaml`
 
@@ -292,7 +298,7 @@ reasoning_strategies:
   default: "CoT"
 ```
 
-3. `prompt_config.yaml`
+### 3. `prompt_config.yaml`
 
 Path: `src/config/prompt_config.yaml`
 
@@ -313,7 +319,7 @@ prompt:
     Based on the reviews, answer the following question: {question}
 ```
 
-4. paths.py
+### 4. paths.py
 
 Path: `src/config/paths.py`
 
@@ -346,6 +352,8 @@ Clone your fork to your computer, create a new branch, and implement your change
 
 3. **Submit a pull request**  
 Send a pull request with a detailed description of your modifications.
+
+---
 
 ### Contact
 
